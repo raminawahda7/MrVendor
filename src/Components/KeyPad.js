@@ -9,13 +9,14 @@ const KeyPad = ({setindexItem, children,indexItem }) => {
 		const handleClick = (value) => { 
 			let indexArr = []
 			indexArr.push(value)
+			console.log('---------',indexArr);
 			if (indexArr.length > 2) {
 			  setindexItem('')
 			  return;
 			}
 			indexArr = indexArr.join()
 			// setindexItem(indexArr)
-			setindexItem(indexArr + value)
+			setindexItem(indexArr)
 		}
 		return (
 			<button key={i} className="btn btn-secondary" style={{margin:'2px'}} value={item} onClick={()=> handleClick(item)}>

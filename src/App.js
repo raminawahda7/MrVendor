@@ -19,17 +19,18 @@ const App = () => {
   const [index, setIndex] = useState('')
   const [item, setItem] = useState('')
 
-  const itemIndex = (value) => {
-    let indexArr = []
-    indexArr.push(value)
-    if (indexArr.length > 2) {
-      setIndex('')
-      return;
-    }
-    indexArr = indexArr.join()
-    setIndex(indexArr)
+  // const itemIndex = (value) => {
+  //   let indexArr = []
+  //   indexArr.push(value)
+  //   if (indexArr.length > 2) {
+  //     setIndex('')
+  //     return;
+  //   }
+  //   indexArr = indexArr.join()
+  //   setIndex(indexArr)
 
-  }
+  // }
+
 
   const getItem = () => {
     if (index.length === 2) {
@@ -58,7 +59,7 @@ const App = () => {
             </div>
             <div class=" result p-2">  {moneyAmount}</div>
               <div class=" result p-2">
-              <button type="button" className="btn btn-danger">Clear</button>
+              <button type="button" className="btn btn-danger" onClick={()=>  setMoneyAmount(0)}>Clear</button>
             </div>
           </div>
 

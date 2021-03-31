@@ -3,11 +3,12 @@ import CashScreen from './CashScreen'
 const KeyPad = ({ coins, setMoneyAmount, children,moneyAmount }) => {
 
 	// const {coins, addValue, children} = this.props;
-	// const coins =  [0.10, 0.20, 0.50, 1];
-	const money = 10;
+	// const coins =  [0.1, 0.2, 0.5, 1];
+
 	const buttons = coins.map((item, i) => {
-		const handleClick = (value) => { 
-			setMoneyAmount(moneyAmount + value)
+		const handleClick = (value) => {
+			// parseFloat to solve 0.1 + 0.2 = 0.30000000000000004 (floating point)
+			setMoneyAmount(parseFloat((moneyAmount+value).toFixed(2)))
 		}
 		return (
 			<button key={i} className="btn btn-warning btn-warning--coins" value={item} onClick={()=> handleClick(item)}>
