@@ -1,6 +1,7 @@
 
 // import {snacks} from './data'
 import {getCoins} from './Changes'
+
 export class MrVendor {
     constructor(snacks, stock, coins) {
         this.snacks = snacks

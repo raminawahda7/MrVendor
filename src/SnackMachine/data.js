@@ -45,6 +45,5 @@ export const snacks = [
     { snackId: '52', snackName: 'Lays', snackPrice: 5, snackCount: 5, imgUrl: lays },
     { snackId: '53', snackName: 'Chips', snackPrice: 1, snackCount: 5, imgUrl: chips },
     { snackId: '54', snackName: 'Chips', snackPrice: 1, snackCount: 5, imgUrl: chips },
-    { snackId: '55', snackName: 'Chips', snackPrice: 1, snackCount: 5, imgUrl: chips },
 
 ]

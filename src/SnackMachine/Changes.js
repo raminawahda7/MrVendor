@@ -24,4 +24,4 @@ export const getCoins = (inputAmount, availableCoins) => {
 }
 
 
-console.log(getCoins(102.5, coins)); 
+console.log(getCoins(85.5, coins)); 

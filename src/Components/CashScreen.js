@@ -6,6 +6,6 @@ const CashScreen= ({money})=>{
 	)
 }
 
-CashScreen.propTypes = {
-  money: React.PropTypes.number
-}
+// CashScreen.propTypes = {
+//   money: React.PropTypes.number
+// }
