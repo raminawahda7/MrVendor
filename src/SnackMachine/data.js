@@ -7,12 +7,12 @@ import galaxy from '../images/galaxy.webp'
 import lays from '../images/lays.jpg'
 import orio from '../images/orio.jpeg'
 
-export const coins = [0.10, 0.20, 0.50, 1];
+export const coins = [0.10, 0.20, 0.50, 1,20,50];
 
  
 export const snacks = [
 
-    { snackId: '11', snackName: 'Coke', snackPrice: 2, snackCount: 5, imgUrl: coke },
+    { snackId: '11', snackName: 'Coke', snackPrice: 2, snackCount: 0, imgUrl: coke },
     { snackId: '12', snackName: 'Twix', snackPrice: 2, snackCount: 5, imgUrl: twix },
     { snackId: '13', snackName: 'Chocolate', snackPrice: 3, snackCount: 5, imgUrl: chocolate },
     { snackId: '14', snackName: 'Doritos', snackPrice: 4, snackCount: 5, imgUrl: doritos },

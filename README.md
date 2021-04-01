@@ -1,9 +1,10 @@
-# Getting Started with Create React App
-
+# Vending Machine
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Vending machines can be be of different types. Some vending machines are dedicated to coffee, some are dedicated to drinks, and others are dedicated to snacks. Mr Vendor work as Snack Vending machine. 
 
+
+## [Live Demo](https://mr-vendor.netlify.app/ )
 
 ## Table of Contents
 - [Available Scripts](#available-scripts)

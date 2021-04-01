@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Item from './Item'
+import PropTypes from 'prop-types';
 
 export default class ItemList extends Component {
 	render() {
@@ -17,6 +18,6 @@ export default class ItemList extends Component {
 	}
 }
 
-// ItemList.propTypes = {
-//   items: React.PropTypes.array,
-// }
+ItemList.propTypes = {
+  items: PropTypes.array,
+}

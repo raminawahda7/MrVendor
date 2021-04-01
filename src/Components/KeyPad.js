@@ -1,21 +1,20 @@
-import React, { Children, Component } from 'react';
-import CashScreen from './CashScreen'
-const KeyPad = ({setindexItem, children,indexItem }) => {
+import React, { Component } from 'react';
 
-	// const {coins, addValue, children} = this.props;
+const KeyPad = ({setindexItem,indexItem }) => {
+
 	const number =  [1,2,3,4,5];
 
 	const buttons = number.map((item, i) => {
 		const handleClick = (value) => { 
-			let indexArr = []
+			let indexArr = [...indexItem]
 			indexArr.push(value)
-			console.log('---------',indexArr);
 			if (indexArr.length > 2) {
 			  setindexItem('')
+			
 			  return;
 			}
-			indexArr = indexArr.join()
-			// setindexItem(indexArr)
+			indexArr = indexArr.join('')
+	
 			setindexItem(indexArr)
 		}
 		return (
@@ -28,10 +27,7 @@ const KeyPad = ({setindexItem, children,indexItem }) => {
 	)
 	return (
 		<div className="row text-center p-relative">
-			{/* <h3>Coins:</h3> */}
 			<div className="coins">{buttons}</div>
-			{/* <h3>Money in the safe :</h3>
-			{children} */}
 		</div>
 	)
 

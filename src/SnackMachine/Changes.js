@@ -1,6 +1,5 @@
 const coins =  [50, 20, 1, 0.5, 0.2, 0.1];
 
-
 export const getCoins = (inputAmount, availableCoins) => {
   let coinsToReturn = []; // create coins to return array
 
@@ -22,6 +21,3 @@ export const getCoins = (inputAmount, availableCoins) => {
   // return coinsToReturn.join(", ");   // return the coinsToReturn array as a string
   return coinsToReturn;
 }
-
-
-console.log(getCoins(85.5, coins)); 

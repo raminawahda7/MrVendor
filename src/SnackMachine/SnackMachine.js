@@ -1,5 +1,3 @@
-
-// import {snacks} from './data'
 import {getCoins} from './Changes'
 
 export class MrVendor {
@@ -10,13 +8,16 @@ export class MrVendor {
         this.theRest = 0;
     }
 
-    // this function to chick item and quantity for this item
-    checkAvailabilty = (indexSnack) => {
-        this.snacks.find(ele => ele.itemId === indexSnack)
-    }
+    // this function to chick an item and return it
+    checkAvailabilty = (indexSnack) => (
+        this.snacks.find(ele => ele.snackId == indexSnack)
+    )
 
-    updateQuantity = (indexSnack) => {
-        //  https://stackoverflow.com/a/38500417
+    updateQuantity = (indexSnack,quantity) => {
+        let obj = this.checkAvailabilty(indexSnack)
+        let index = this.snacks.indexOf(obj)
+        this.snacks.fill(obj.snackCount=quantity,index,index++)
+        return obj;
     }
 
     isMoneyValid = (money) => {
@@ -33,20 +34,24 @@ export class MrVendor {
     //  2- after VM accept the money decrease the quantity for this item
     giveMeSnack = (indexSnack, money) => {
         let snackReq = this.checkAvailabilty(indexSnack);
+        console.log(snackReq);
 
-        if (!this.isMoneyValid(money)) {
-            return 'My Vending Machine Accept just 10c, 20c, 50c, 1$, 20$ and 50$'
-        }
+        // if (!this.isMoneyValid(money)) {
+        //     return 'My Vending Machine Accept just 10c, 20c, 50c, 1$, 20$ and 50$'
+        // }
+        
         // compare between snackPrice and money
         if (!snackReq.snackCount) {
             alert('Snack slot for this type is empty');
+            // return 
         } else if (snackReq.snackPrice > money) {
             alert('Snack price is larger than what you inserted');
         }
         else {
-            // here should 
+
             this.theRest = money - snackReq.snackPrice;
             let changes = getCoins(this.theRest,this.coins);
+            return changes
         }
     }
 
@@ -54,7 +59,7 @@ export class MrVendor {
         return this.stock;
     }
 
-    getChanges(){
-        // return changes obj if there is a limitation on changes in machine stock 
+    getChanges(moneyAmount){
+        return getCoins(moneyAmount,this.coins)
     }
 }

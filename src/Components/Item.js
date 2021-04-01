@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Item extends Component {
 	render() {
@@ -19,7 +20,6 @@ export default class Item extends Component {
 	}
 }
 
-// Item.propTypes = {
-//   item: React.PropTypes.object,
-//   i: React.PropTypes.number
-// }
+Item.propTypes = {
+  item:PropTypes.object,
+}

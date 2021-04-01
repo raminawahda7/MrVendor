@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Rajdhani';
+  src: local('Rajdhani'), url(./fonts/glyphicons-halflings-regular.svg) format('truetype');
+}

@@ -1,9 +1,7 @@
-import React, { Children, Component } from 'react';
-import CashScreen from './CashScreen'
-const KeyPad = ({ coins, setMoneyAmount, children,moneyAmount }) => {
+import React, {Component} from 'react';
 
-	// const {coins, addValue, children} = this.props;
-	// const coins =  [0.1, 0.2, 0.5, 1];
+const KeyPadCoins = ({ coins, setMoneyAmount, children,moneyAmount }) => {
+
 
 	const buttons = coins.map((item, i) => {
 		const handleClick = (value) => {
@@ -19,14 +17,11 @@ const KeyPad = ({ coins, setMoneyAmount, children,moneyAmount }) => {
 	)
 	return (
 		<div className="row text-center p-relative">
-			{/* <h3>Coins:</h3> */}
 			<div className="coins">{buttons}</div>
-			{/* <h3>Money in the safe :</h3>
-			{children} */}
 		</div>
 	)
 
 }
 
 
-export default KeyPad;
+export default KeyPadCoins;
